@@ -48,7 +48,7 @@ main {
   -webkit-overflow-scrolling: touch;
   padding: 200px 5%;
   /*background-color: #9cb3a8;*/
-  background: url(goldenGate.jpg) no-repeat center center fixed;
+  background: url(goldenGateSig.png) no-repeat center center fixed;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   /* Force Hardware Acceleration in WebKit */
