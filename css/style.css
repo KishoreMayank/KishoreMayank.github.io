@@ -322,7 +322,7 @@ main p {
   margin-bottom: 1.7em;
   font-size: 1.3rem;
   font-weight: 800;
-  color: #080b0f;
+  color: white;
   text-transform: uppercase;
 }
 .cd-nav h2::after {
