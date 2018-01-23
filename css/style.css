@@ -48,9 +48,6 @@ main {
   -webkit-overflow-scrolling: touch;
   padding: 200px 5%;
   /*background-color: #9cb3a8;*/
-  background: url(goldenGateSig.png) no-repeat center center fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -65,6 +62,16 @@ main {
   -webkit-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   -moz-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
+}
+.index {
+    background: url(goldenGateSig.png) no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.about {
+    background: url(aboutBack.jpg) no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 main h1, main p, main div {
   text-align: center;
@@ -99,6 +106,49 @@ main p {
 .resume:active {
   background-color: #fff;
   color: #000;
+}
+.animate {
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+.action-button {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  color: #FFF;
+  text-decoration: none;
+}
+.blue {
+  background-color: #3498DB;
+  border-bottom: 5px solid #2980B9;
+  text-shadow: 0px -2px #2980B9;
+}
+.red {
+  background-color: #E74C3C;
+  border-bottom: 5px solid #BD3E31;
+  text-shadow: 0px -2px #BD3E31;
+}
+.green {
+  background-color: #82BF56;
+  border-bottom: 5px solid #669644;
+  text-shadow: 0px -2px #669644;
+}
+
+.yellow {
+  background-color: #F2CF66;
+  border-bottom: 5px solid #D1B358;
+  text-shadow: 0px -2px #D1B358;
+}
+.action-button:hover {
+  transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+  border-bottom: 1px solid;
 }
 .navigation-is-open main {
   -webkit-transform: translateX(100%);
