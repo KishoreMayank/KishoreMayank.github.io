@@ -63,6 +63,10 @@ main p {
   background-size: 100% 100%;
 }
 
+.bgimg-3 {
+  background-color: #3090C7;
+}
+
 .caption span.border {
   background-color: #111; color: #fff; padding: 18px; font-size: 25px; letter-spacing: 10px;
 }
