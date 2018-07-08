@@ -1,166 +1,734 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=1024">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!-- Latest compiled and minified CSS -->
-	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!-- jQuery library -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><!-- Latest compiled JavaScript -->
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Mayank Kishore</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Mayank Kishore</title>
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
 </head>
-<body>
-<header>
-	<nav class="cd-stretchy-nav">
-		<a class="cd-nav-trigger" href="#0">
-			<span aria-hidden="true"></span>
-		</a>
 
-		<ul id="box">
-			<li><a href="#home" class="btn active"><span>Home</span></a></li>
-			<li><a href="#about" class="btn"><span>About</span></a></li>
-			<li><a href="#skills" class="btn"><span>Skills</span></a></li>
-			<li><a href="#experiece" class="btn"><span>Experience</span></a></li>
-			<li><a href="#contact" class="btn"><span>Contact</span></a></li>
-		</ul>
+<body id="typeop">
 
-		<span aria-hidden="true" class="stretchy-nav-bg"></span>
-	</nav>
-</header>
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
 
-<main class="cd-main-content">
-		<div class="index" id="home">
-			<p style="padding-top: 2.5%; font-size: 40px; color: black; font-family: Palatino Linotype, Book Antiqua, Palatino, serif;">Mayank Kishore: Thinker. Developer. Leader.</p>
-			<p>Computer Science, Georgia Institute of Technology</p>
-        	<a href="#contact" class="resume">Contact Me</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        	<a class="resume" href="/assets/Mayank Kishore - Resume.pdf" target="_blank">Resume</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        	<a class="resume" href="/assets/Analysis of Government Spending on Infrastructure.pdf" target="_blank">Data Analysis Report</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        	<!-- <a href="/blog/blog.html" class="resume">My Blog!</a> -->
-		</div>
+        <div class="header-logo">
+            <a class="site-logo" href="index.html"><img src="images/logo.png" alt="Homepage"></a>
+        </div>
 
-	    <div id="about">
-			<div style="color: #777;background-color:white;height: 500px; text-align:center;padding:50px 80px;text-align: justify;">
-			  <h3 style="text-align:center; letter-spacing: 5px; text-transform: uppercase; font: 24px Lato, sans-serif; color: #111;">About Me</h3>
-	        	<div class="col-sm-8"><br>
-                    <div style="color: black; font-size: 2.25rem; text-align: left; font-family: Palatino Linotype, Book Antiqua, Palatino, serif; line-height: 1.6; margin-bottom: 0.5em;">
-                    Hi! My Name is Mayank Kishore and I am a first year Computer Science major at Georiga Tech!
-                    I have a strong passion for computer science and have experiece with software engineering, frontend and machine learning.<br><br>
-                    I am currently looking for a 2018 Summer Internship and am open to any opportunity that deals with Computer Science.
-                    Please contact me if you think I could be a good fit for your company.
-                    My resume is attached on the home page and my contact info is down below.
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
+                <li><a class="smoothscroll"  href="#works" title="works">Experience</a></li>
+                <li><a class="smoothscroll"  href="#blog" title="blog">Musings</a></li>
+                <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+   <!-- home
+   ================================================== -->
+   <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/goldenGateSig.png" data-natural-width=3000 data-natural-height=2002 data-position-y=center>
+
+        <div class="overlay"></div>
+        <!-- <div class="shadow-overlay"></div> -->
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>"Hello, World!"</h3>
+
+                <h1>
+                    I am Mayank Kishore. <br>
+                    A Computer Scientist. <br>
+                    Currently in Atlanta <br> @ Georgia Tech.
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="#works" class="smoothscroll btn btn--stroke">
+                        Latest Projects
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        More About Me
+                    </a>
+                </div>
+
+                <div class="home-content__scroll">
+                    <a href="#about" class="scroll-link smoothscroll">
+                        <span>Scroll Down</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div> <!-- end home-content -->
+
+        <ul class="home-social">
+            <li>
+                <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="im im-behance" aria-hidden="true"></i><span>Behance</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="im im-pinterest" aria-hidden="true"></i><span>Pinterest</span></a>
+            </li>
+        </ul> 
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+        
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full text-center">
+                <h3>About</h3>
+                <h1>More About Me</h1>
+                <p class="lead">A business oriented computer scientist with a deep passion for technology with a propensity for dancing and running with an interest in astronomy, basketball, and photography.</p>
+            </div>
+        </div>
+
+        <div class="row about-content">
+
+            <div class="col-six tab-full left">
+                <h3>Hey, What's Up?</h3>
+
+                <p>My name is Mayank Kishore and I am a student at Georgia Tech. Currently, I am exploring the field of Computer Science to discover where I can have the most fun while making the greatest impact.</p>
+
+                <p>
+                I love learning. As cheesy as that sounds, it is, for the most part, true. The only notable exception is my high school history class where my teacher insisted on putting an hour long documentry every morning at 7:20am. Unexpectedly, this did not pair well with sleep deprived high school students. But I digress. Learning, is the development of ideas into a concrete understaing of the concepts and usage of the material. Oftentimes, it's easy to forget about the usability of what is taught in class because of the linear nature of lectures. I strive to throughly understand each concept, which leads to failure, which leads to learning, which leads to failure, which leads to a StackOverFlowError. Jokes aside, I am always excited to discover new opportunities to learn. If my resume meets your criteria, feel free to reach out!  
+                </p>
+            </div>
+
+            <div class="col-six tab-full right">
+                <h3>I've Got Some Skills.</h3>
+
+                <ul class="skill-bars">
+                    <li>
+                    <div class="progress percent90"><span>90%</span></div>
+                    <strong>Java</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent85"><span>85%</span></div>
+                    <strong>Python</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent80"><span>80%</span></div>
+                    <strong>SQL</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent70"><span>70%</span></div>
+                    <strong>C#</strong>
+                    </li>   
+                    <li>
+                    <div class="progress percent90"><span>90%</span></div>
+                    <strong>MATLAB</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent85"><span>85%</span></div>
+                    <strong>HTML5 / CSS3</strong>
+                    </li>   
+                </ul>
+            </div>
+
+        </div> <!-- end about-content -->
+
+    </section> <!-- end about -->
+
+    <!-- blog
+    ================================================== -->
+    <section id="works" class="s-blog target-section">
+
+        <div class="row narrow section-intro has-bottom-sep">
+                <div class="col-full text-center">
+                    <h3>Experience</h3>
+                    <h1>Projects and Work Experience</h1>
+                    <p class="lead">Here, I will discuss the projects I have completed and experience I have gained and exaustively identify the contributions I made to the project.</p>
+                </div>
+        </div>
+
+        <div class="row about-content about-content--timeline">
+
+            <div class="col-full text-center">
+                <div class="timeline">
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">May 2018 - Present</p>
+                            <h3>BazaarVoice</h3>
+                            <h5>Data Engineering Intern</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>I have been working on developing a quality index for each user contributed reviews for consumer products to improve the profits of over 3500+ by allowing them to show reviews that is the most relevant to its customer.</p>
+                        </div>
+                    </div>  <!-- end timeline__block -->
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">January 2018 - Present</p>
+                            <h3>Automated Algorithm Design</h3>
+                            <h5>Researcher</h5>
+                        </div>
+                        <div class="timeline__desc">    
+                            <p>Developing a better stock predicted using a variety of indicators and using EMADE, a Georgia Tech built machine learning model that improves itself by replacing each intermediate step in the tree with an algorithm instead of a primary operator.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end left -->
+
+            <div class="col-six tab-full right">
+                <div class="timeline">
+
+                    <!-- <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">July 2012 - June 2014</p>
+                            <h3>Great Design Studio</h3>
+                            <h5>Web Designer</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
+                        </div>
+                    </div> --> <!-- end timeline__block -->
+
+                    <!-- <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">July 2011 - June 2012</p>
+                            <h3>Epic Design Agency</h3>
+                            <h5>Web Designer</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+                        </div>
+                    </div>  --><!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end right -->
+
+        </div> <!-- end about-content timeline -->
+
+        <div class="row about-content about-content--buttons">
+
+            <div class="col-six tab-full left">
+                <a href="#0" class="btn btn--primary full-width">Download My CV</a>
+            </div>
+            <div class="col-six tab-full right">
+                <a href="#0" class="btn full-width">Contact Me</a>
+            </div>
+
+        </div> <!-- end about-content buttons -->
+
+    </section> <!-- end s-blog -->
+
+    <!-- works
+    ================================================== -->
+    <section id="blog" class="s-works target-section">
+
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full">
+                <h3>Musings</h3>
+                <h1>Thought Provoking Curiosities.</h1>
+                <p class="lead">This is where I will be linking the topics that interest me personally to my blog, <a href="KishoreMayank.github.io/buzzwordzz" target="_blank">buzzwordzz.com</a>. Mainly, there will be content regarding astronomical phenomenon, novel photographic techniques, and maybe some "cool" philosophical discussions.</p>
+            </div>
+        </div>
+
+        <div class="row masonry-wrap">
+            <div class="masonry">
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-beetle.jpg" class="thumb-link" title="The Beetle Car" data-size="1050x700">
+                                <img src="images/portfolio/beetle.jpg" 
+                                     srcset="images/portfolio/beetle.jpg 1x, images/portfolio/beetle@2x.jpg 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Life of Sun
+                            </h3>
+                            <p class="item-folio__cat">
+                                Astronomy
+                            </p>
+                        </div>
+
+                        <div class="item-folio__caption">
+                            <p></p>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-lighthouse.jpg" class="thumb-link" title="Lighthouse" data-size="1050x700">
+                                <img src="images/portfolio/lighthouse.jpg" 
+                                     srcset="images/portfolio/lighthouse.jpg 1x, images/portfolio/lighthouse@2x.jpg 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Lighthouse
+                            </h3>
+                            <p class="item-folio__cat">
+                                Web Design
+                            </p>
+                        </div>
+
+                        <div class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-salad.jpg" class="thumb-link" data-size="1050x700">
+                                <img src="images/portfolio/salad.jpg" 
+                                     srcset="images/portfolio/salad.jpg 1x, images/portfolio/salad@2x.jpg 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Salad
+                            </h3>
+                            <p class="item-folio__cat">
+                                Branding
+                            </p>
+                        </div>
+
+                        <span class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" data-size="1050x700">
+                                <img src="images/portfolio/woodcraft.jpg"
+                                     srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Woodcraft
+                            </h3>
+                            <p class="item-folio__cat">
+                                Branding
+                            </p>
+                        </div>
+
+                        <span class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-skaterboy.jpg" class="thumb-link" data-size="1050x700">
+                                <img src="images/portfolio/skaterboy.jpg"
+                                     srcset="images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Skaterboy
+                            </h3>
+                            <p class="item-folio__cat">
+                                Web Development
+                            </p>
+                        </div>
+
+                        <span class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-liberty.jpg" class="thumb-link" data-size="1050x700">
+                                <img src="images/portfolio/liberty.jpg"
+                                     srcset="images/portfolio/liberty.jpg 1x, images/portfolio/liberty@2x.jpg 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Liberty
+                            </h3>
+                            <p class="item-folio__cat">
+                                Branding
+                            </p>
+                        </div>
+
+                        <span class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-minimalismo.jpg" class="thumb-link" data-size="1050x700">
+                                <img src="images/portfolio/minimalismo.jpg"
+                                     srcset="images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Minimalismo
+                            </h3>
+                            <p class="item-folio__cat">
+                                Web Design
+                            </p>
+                        </div>
+
+                        <span class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" data-size="1050x700">
+                                <img src="images/portfolio/shutterbug.jpg"
+                                     srcset="images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Lady Shutterbug
+                            </h3>
+                            <p class="item-folio__cat">
+                                Branding
+                            </p>
+                        </div>
+
+                        <span class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+            </div>
+        </div> <!-- end masonry -->
+
+    </section> <!-- end works -->
+
+    <!-- s-stats
+    ================================================== -->
+    <section id="stats" class="s-stats">
+        <div class="row block-1-4 block-tab-1-2 block-mob-full stats">
+
+            <div class="col-block stats__col ">
+                <div class="stats__count">
+                    6127
+                </div>
+                <h4>Miles Run</h4>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">
+                    22
+                </div>
+                <h4>Photgraphs Taken</h4>
+            </div>
+            <div class="col-block stats__col stats__col--highlight">
+                <div class="stats__upsign">
+                    <a href="#"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                </div>
+                <div class="stats__count">
+                    283
+                </div>
+                <h4>Hours Coded</h4>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">
+                    0
+                </div>
+                <h4>Hours Slept</h4> 
+            </div>
+
+        </div>
+    </section> <!-- end s-stats -->
+
+
+    <!-- s-stats
+    ================================================== -->
+    <section id="contact" class="s-contact target-section">
+
+        <div class="overlay"></div>
+
+        <div class="row narrow section-intro">
+            <div class="col-full">
+                <h3>Contact</h3>
+                <h1>Say Hello.</h1>
+                
+                <p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p>
+            </div>
+        </div>
+
+        <div class="row contact__main">
+            <div class="col-eight tab-full contact__form">
+                <form name="contactForm" id="contactForm" method="post" action="">
+                    <fieldset>
+    
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Submit</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    </fieldset>
+                </form>
+    
+                <!-- contact-warning -->    
+                <div class="message-warning">   
+                    Something went wrong. Please try again. 
+                </div> 
+            
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+                        
+            </div>
+            <div class="col-four tab-full contact__infos">
+                <h4 class="h06">Phone</h4>
+                <p>Phone: 908-361-3246
+                </p>
+
+                <h4 class="h06">Email</h4>
+                <p>mayankkishore.in@gmail.com
+                </p>
+
+                <!-- <h4 class="h06">Address</h4>
+                <p>
+                1600 Amphitheatre Parkway<br>
+                Mountain View, CA<br>
+                94043 US
+                </p> -->
+            </div>
+
+        </div>
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full">
+
+                <div class="footer-logo">
+                    <a class="footer-site-logo" href="#0"><img src="images/logo.png" alt="Homepage"></a>
+                </div>
+
+                <ul class="footer-social">
+                    <li><a href="#0">
+                        <i class="im im-facebook" aria-hidden="true"></i>
+                        <span>Facebook</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-twitter" aria-hidden="true"></i>
+                        <span>Twitter</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-instagram" aria-hidden="true"></i>
+                        <span>Instagram</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-behance" aria-hidden="true"></i>
+                        <span>Behance</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-pinterest" aria-hidden="true"></i>
+                        <span>Pinterest</span>
+                    </a></li>
+                </ul>
+                    
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Hola 2017</span> 
+                    <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>	
+                </div>
+
+                <div class="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item" style=""></div>
+                <div class="pswp__item" style=""></div>
+                <div class="pswp__item" style=""></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button> 
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> 
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <center><img border="0" alt="ProfilePic" src="mayank.jpg" width="350" height="350 "></center>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
                 </div>
-			</div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> 
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
 
-			<div class="bgimg-2" style="background-image: url(tech.jpg); min-height: 500px; background-size: 100% 100%;">
-			  <div class="caption" style="position: absolute; left: 0; top: 50%; width: 100%; text-align: center; color: #000;">
-			    <!-- <span class="border" style="background-color:rgba(0,0,0,0.6);font-size:25px;color: #f7f7f7;">ATLANTA, GEORGIA</span> -->
-			  </div>
-			</div>
+        </div>
 
-			<div id="skills" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-			  <h3 style="text-align:center; letter-spacing: 5px; text-transform: uppercase; font: 24px Lato, sans-serif; color: #111;">Skills</h3>
-			  	<div style="color: black; font-size: 2rem; text-align: left; font-family: Palatino Linotype, Book Antiqua, Palatino, serif; line-height: 1.6; margin-bottom: 0.5em;">
-			  		<br>
-			  		<u>Programming:</u> Java, MATLAB, Python, AngularJS, JavaScript, Bootstrap, HTML, CSS, C++<br>
-					<u>Tools:</u> Android Studio, Git, Ubuntu, CLI, Anaconda, Jupyter Notebook, Autodesk Inventor, Autodesk Fusion, CNC
-	        	</div>
-			</div>
+    </div><!-- end photoSwipe background -->
 
-			<div class="bgimg-2" style="background-image: url(boat.jpg); min-height: 500px; background-size: 100% 100%;">
-			  <div class="caption" style="position: absolute; left: 0; top: 50%; width: 100%; text-align: center; color: #000;">
-			    <!-- <span class="border" style="background-color:rgba(0,0,0,0.6);font-size:25px;color: #f7f7f7;">LOS ANGELES, CALIFORNIA</span> -->
-			  </div>
-			</div>
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
 
-			<div id="experience"style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-			  <h3 style="text-align:center; letter-spacing: 5px; text-transform: uppercase; font: 24px Lato, sans-serif; color: #111;">Projects</h3>
-			  	<div style="color: black; font-size: 2rem; text-align: left; font-family: Palatino Linotype, Book Antiqua, Palatino, serif; line-height: 1.6; margin-bottom: 0.5em;">
-			  		<br>
-			  		<u>Lost and Found App</u> <span style="float: right">January 2018 – Present</span><br>
-					• Use a convolutional neural network to pair an image of a lost object with the found object to return it to the owner<br><br>
 
-			  		<u>Stocks and Options Manager</u> | AngularJS 	<span style="float: right">January 2018 – Present</span><br>
-					•	Developing a stock and option tracker that displays information in a simple user interface, so the user knows when to sell or buy<br><br>
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
-					<u>GITMAD Appathon</u> | JavaScript | HTML/CSS | GeoExtrapolator 	<span style="float: right">October 2017</span><br>
-					•	Conveyed desirable locations to live based on personal preferences including climate, population density, and terrain<br>
-					•	Used the Google Maps Cluster API to display these locations<br><br>
-
-					<u>Project One Apps</u> | Android Studio | Crash Course	<span style="float: right">August 2017 - Present</span><br>
-					•	Led two partners to create an android application which catalogued and stored educational videos into a user friendly interface<br>
-					•	Designed the app to make these educational videos accessible to everyone for free<br><br>
-
-			  <h3 style="text-align:center; letter-spacing: 5px; text-transform: uppercase; font: 20px Lato, sans-serif; color: #111;">Experience</h3><br>
-
-			  		<u>Vertically Integrated Project</u> - Automated Algorithm Design with Professor Greg Rohling
-			  		<span style="float: right">January 2018 - Present</span><br>
-					•	Designing machine learning, genetic, and evolutionary algorithms to outperform optimization methods and existing algorithms<br>
-					•	Leverage these algorithms to real datasets beginning with sample Titanic data<br><br>
-
-					<u>RoboJackets</u> - Intelligent Ground Vehicle Competition
-					<span style="float: right">Fall 2017 - Present</span><br>
-					•	Working with the software team using C++, Arduino, OpenCV, and Rviz to program an autonomous, off-road, robot<br>
-					•	Using computer vision to navigate through an obstacle course and compete against other teams in June<br><br>
-					<u>FIRST Robotics Team</u> - Captain of Team 1403
-					<span style="float: right">September 2013 – June 2017</span><br>
-					•	Dealt with project management and allocation of tasks and won the District Chairman’s Award and the Industrial Design Award<br>
-					•	Used Autodesk Inventor and Autodesk Fusion along with G-Code, a CNC, and a 3D printer to fabricate CAD models<br><br>
-
-					<u>Rutgers University</u> - Research Intern under Professor Mina Pelegri
-					<span style="float: right">June 2016 - August 2016</span><br>
-					•	Tried to maximize the tensile strength of carbon fiber to try and create lighter and safer bulletproof vests for the army and police<br><br>
-	        	</div>
-			</div>
-
-			<div id="contact" class="bgimg-3" style="min-height: 110px; background-size: 100% 100%;">
-			  <div class="caption" style="position: absolute; left: 0; top: 0%; width: 100%; text-align: left; color: #000;">
-		    	<span class="cd-half-block" style="background-color: rgba(0,0,0,0.8);font-size:25px;color: rgba(0,0,0,0.8);">
-					<address>
-						<center><ul class="cd-contact-info" style="background-color:rgba(0,0,0,0.8);font-size:25px;color: #ffffff; width: 100%; height: 100%;">
-							<div class="col-sm-6" style="background-color:rgba(0,0,0,0.75)">
-								<li style="text-align: left">
-									<span>333089 Georgia Tech Station</span>
-									<span>Atlanta, GA 30332-1480</span>
-								</li>
-								<li style="text-align: left"><a href="mailto:mayankkishore.in@gmail.com">mayankkishore.in@gmail.com</a></li>
-								<li style="text-align: left"><a href="mailto:mkishore3@gatech.edu">mkishore3@gatech.edu</a></li>
-								<li style="text-align: left"><a href="tel:9083613246">908-361-3246</a></li>
-							</div>
-							<div class="col-sm-6" style="background-color:rgba(0,0,0,0.75)">
-								<li style="text-align: right"><a href="https://github.com/KishoreMayank"><img border="0" alt="GitHub" src="github.png" width="93" height="93"></a>&nbsp;&nbsp;
-								<a href="https://www.linkedin.com/in/mayank-kishore/"><img border="0" alt="LinkedIn" src="linkedin.png" width="96" height="96"></a>&nbsp;&nbsp;
-								<a href="https://www.facebook.com/mayank.kishore.357"><img border="0" alt="Facebook" src="facebook.png" width="96" height="96"></a>&nbsp;&nbsp;
-								<a href="https://www.instagram.com/_mayankkishore/"><img border="0" alt="Instagram" src="insta.png" width="90" height="90"></a>&nbsp;&nbsp;
-								<a href="http://vsco.co/mayankk1279/images/1"><img border="0" alt="VSCO" src="vsco.jpg" width="90" height="90"></a></li>
-							</div>
-						</ul></center>
-					</address>
-				</span>
-			  </div>
-			</div>
-		</div>
-</main>
-
-<script src="js/jquery-2.1.4.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-<script>
-$(".btn").click(function (e) {
-    $(".active").removeClass("active");
-    // or $(".active").removeClass("active");
-
-    $(this).addClass("active");
-});
-</script>
 </body>
+
 </html>
