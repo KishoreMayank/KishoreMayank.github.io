@@ -47,8 +47,8 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+    <link rel="icon" href="logo.ico" type="image/x-icon">
 
 </head>
 
@@ -66,8 +66,8 @@
             <ul class="header-nav">
                 <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
                 <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
-                <li><a class="smoothscroll"  href="#works" title="works">Experience</a></li>
-                <li><a class="smoothscroll"  href="#blog" title="blog">Musings</a></li>
+                <!-- <li><a class="smoothscroll"  href="#works" title="works">Experience</a></li> -->
+                <li><a class="smoothscroll"  href="#lins" title="links">Links</a></li>
                 <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
             </ul>
         </nav>
@@ -91,18 +91,20 @@
                 <h3>"Welcome"</h3>
 
                 <h1>
-                    I am Mayank Kishore. <br>
-                    Developer. <br>
-                    Leader. <br>
-                    Explorer. <br>
+                    Hi! I'm Mayank Kishore. <br>
                 </h1>
+                <p style="color: white;  font-size: xx-large; margin-bottom: 100px">
+                    Working on <a href="https://www.getsugar.money/" target="_blank">Sugar</a>. <br>
+                    Excited about Tech. <br>
+                    <a href="https://twitter.com/_mayankkishore" target="_blank">Reach Out</a>! <br>
+                </p>
 
                 <div class="home-content__buttons">
-                    <a href="#works" class="smoothscroll btn btn--stroke">
-                        Latest Projects
-                    </a>
                     <a href="#about" class="smoothscroll btn btn--stroke">
                         More About Me
+                    </a>
+                    <a href="#links" class="smoothscroll btn btn--stroke">
+                        My Writings
                     </a>
                 </div>
 
@@ -124,10 +126,10 @@
                 <a href="https://github.com/KishoreMayank" target="_blank"><i class="im im-github" aria-hidden="true"></i><span></span></a>
             </li>
             <li>
-                <a href="https://vsco.co/mayankk1279/images/1" target="_blank"><i class="im im-photo-camera" aria-hidden="true"></i><span></span></a>
+                <a href="https://mayankmusing.substack.com/" target="_blank"><img src="images/substack.png" class="im" aria-hidden="true" width="20px" height="20px" style="margin-right: 9px; margin-top: 4px;"></img><span></span></a>
             </li>
             <li>
-                <a href="https://www.facebook.com/mayank.kishore.357"><i class="im im-facebook" aria-hidden="true"></i><span></span></a>
+                <a href="https://twitter.com/_mayankkishore" target="_blank"><i class="im im-twitter" aria-hidden="true"></i><span>Twitter</span></a>
             </li>
             <li>
                 <a href="https://www.instagram.com/_mayankkishore/" target="_blank"><i class="im im-instagram" aria-hidden="true"></i><span></span></a>
@@ -144,26 +146,22 @@
         
         <div class="row narrow section-intro has-bottom-sep">
             <div class="col-full text-center">
-                <h3>About</h3>
-                <h1>More About Me</h1>
-                <p class="lead">A third year computer scientist with a deep passion for technology with personal interests in astronomy, basketball, dancing, and photography.</p>
+                <h1>About</h1>
             </div>
         </div>
 
         <div class="row about-content">
 
-            <div class="col-six tab-full left">
+            <div class="col-twelve tab-full left">
                 <h3>Hey, What's Up?</h3>
 
-                <p>My name is Mayank Kishore and I am a student at Georgia Tech studying Computer Science. Currently, I am exploring the fields of computer vision and software development to discover where I can make the greatest impact.</p>
-
-                <p>
-                 I love to explore and discuss breakthroughs in technology and science. I take every chance to delve into a novel perspective on any concept because there is always something new to be learnt. Oftentimes, I like to share my ideas on a new topic and I try to do this by either discussing my ideas with a friend or by writing about it in my <a href="https://medium.com/buzz-words" target="_blank">blog</a>.
-                </p> 
+                <p>I am building <a href="https://www.getsugar.money/" target="_blank">Sugar</a></p>
+                <p>Recently graduated Georgia Tech with my B.S. and M.S. in Computer Science. Decided to forgo a job to build an application that will help people maximize their credit card rewards. This will save $500 per person on average every year!</p>
+                <p>I love travelling and doing / learning new things. Am also attempting to get into reading and writing. If you have any book suggestions, please send them my way. My writing is on Substack and Medium. Absolutely love meeting with and talking to new people, so definitely reach out and we can set up a chat!</p>
                 <p>Got something to discuss? <a href="#contact">Contact Me</a></p>
             </div>
 
-            <div class="col-six tab-full right">
+            <!-- <div class="col-six tab-full right">
                 <h3>I've Got Some Skills.</h3>
 
                 <ul class="skill-bars">
@@ -192,7 +190,7 @@
                     <strong>Project Management</strong>
                     </li>   
                 </ul>
-            </div>
+            </div> -->
 
         </div> <!-- end about-content -->
 
@@ -200,6 +198,7 @@
 
     <!-- blog
     ================================================== -->
+    <!--
     <section id="works" class="s-blog target-section">
 
         <div class="row narrow section-intro has-bottom-sep">
@@ -228,7 +227,7 @@
                             Created dev tool with React and jQuery that generates alarms to monitor FireTV devices for scalability and latency issues and sends actionable alerts to the OnCall with a projected 100+ dev hours saved every year
                             </p>
                         </div>
-                    </div>  <!-- end timeline__block -->
+                    </div>  end timeline__block
                     
                     <div class="timeline__block">
                         <div class="timeline__bullet" style="background-image: url('images/experiences/gtech.png')"></div>
@@ -245,7 +244,7 @@
                             Generated point clouds to visualize individual cost functions and simulated multiple trajectory optimization scenarios with ROS and RVIZ to optimize human centric robot trajectories to improve safety, comfort, and efficiency.
                         </p>
                         </div>
-                    </div>  <!-- end timeline__block -->
+                    </div>  end timeline__block
 
                     <div class="timeline__block">
                         <div class="timeline__bullet" style="background-image: url('images/experiences/wisk.png')"></div>
@@ -258,7 +257,7 @@
                             <p>Was going to work with Autonomous Air Taxis as a Software Engineer
                         </p>
                         </div>
-                    </div>  <!-- end timeline__block -->
+                    </div>  end timeline__block
                     
                     <div class="timeline__block">
                         <div class="timeline__bullet" style="background-image: url('images/experiences/uberatg.png')"></div>
@@ -273,7 +272,7 @@
                             Developed a real-time event extractor that scrapes over 5,000 entries of security relevant data every day. Participated in code reviews utilizing Jira and GitHub to work with the AVSecurity team to deploy my project.
                         </p>
                         </div>
-                    </div>  <!-- end timeline__block -->
+                    </div>  end timeline__block
 
                     <div class="timeline__block">
                         <div class="timeline__bullet" style="background-image: url('images/experiences/bazaarvoice.png')"></div>
@@ -288,7 +287,7 @@
                             Queried the product data using Amazon Athena and wrote multiple reusable scripts to get review text, helpfulness votes, transaction data, submission times, etc. Developed python scripts to interpret the data and ran correlation tests to determine the predictability of the quality of a review based on readability, sentiment score, and length. Trained a Random Forest on scored review data to attempt to automatically classify text data based on a variety of features such as length, readability, and sentiment scores.
                         </p>
                         </div>
-                    </div>  <!-- end timeline__block -->
+                    </div>  end timeline__block
 
                     <div class="timeline__block">
                         <div class="timeline__bullet" style="background-image: url('images/experiences/dsgt.png')"></div>
@@ -304,7 +303,7 @@
                                 Hosted a lecture on the Kaggle competition, Titanic: Machine Learning from Disaster. In a lecture hall of over 80 students, I walked through a sample solution in just over an hour and a half. I touched upon aspects of data cleaning, predictive modeling, and visualization techniques. Wrapped up the lecture with an intro into machine learning using a cross-validation technique to finish the model. Created and deployed the website for the club: <a href="https://datasciencegt.org/" target="_blank">https://datasciencegt.org/</a>.     
                             </p>
                         </div>
-                    </div> <!-- end timeline__block -->
+                    </div> end timeline__block
 
                     <div class="timeline__block">
                         <div class="timeline__bullet" style="background-image: url('images/experiences/gtech.png')"></div>
@@ -319,7 +318,7 @@
                             My subteam is attempting tackle time series stock market data as a classification problem. We are using EMADE's (Evolutionary Multi-objective Algorithm Design Engine) current features while adding in technical indicators as primitives to generate buy/sell signals at the end of some window of time. sResponsible for developing two technical indicators in Python to add to the model to get a more accurate prediction. Implemented the Ease of Movement and the Force Index indicators.
                         </p>
                         </div>
-                    </div> <!-- end timeline__block -->
+                    </div> end timeline__block
 
                     <div class="timeline__block">
                         <div class="timeline__bullet" style="background-image: url('images/experiences/robo.png')"></div>
@@ -334,15 +333,15 @@
                             Worked with the software team and utilized C++, Arduino, OpenCV, and Rviz to program an autonomous, off-road, robot. Gained an understanding of computer vision, robotics and automation, and troubleshooting problems. 
                         </p>
                         </div>
-                    </div> <!-- end timeline__block -->
+                    </div> end timeline__block
 
-                </div> <!-- end timeline -->
-            </div> <!-- end left -->
+                </div> end timeline
+            </div> end left
 
             <div class="col-six tab-full right">
                 <div class="timeline">
 
-                    <!-- <div class="timeline__block">
+                    <div class="timeline__block">
                         <div class="timeline__bullet"></div>
                         <div class="timeline__header">
                             <p class="timeline__timeframe">July 2012 - June 2014</p>
@@ -352,9 +351,9 @@
                         <div class="timeline__desc">
                             <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
                         </div>
-                    </div> --> <!-- end timeline__block -->
+                    </div> end timeline__block
 
-                    <!-- <div class="timeline__block">
+                    <div class="timeline__block">
                         <div class="timeline__bullet"></div>
                         <div class="timeline__header">
                             <p class="timeline__timeframe">July 2011 - June 2012</p>
@@ -364,12 +363,12 @@
                         <div class="timeline__desc">
                             <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
                         </div>
-                    </div>  --><!-- end timeline__block -->
+                    </div>  end timeline__block
 
-                </div> <!-- end timeline -->
-            </div> <!-- end right -->
+                </div> end timeline
+            </div> end right
 
-        </div> <!-- end about-content timeline -->
+        </div> end about-content timeline
 
         <div class="row about-content about-content--buttons">
 
@@ -380,223 +379,73 @@
                 <a href="mailto:mkishore3@gatech.edu" class="btn full-width">Contact Me</a>
             </div>
 
-        </div> <!-- end about-content buttons -->
+        </div> end about-content buttons
 
-    </section> <!-- end s-blog -->
+    </section> end s-blog -->
 
     <!-- works
     ================================================== -->
-    <section id="blog" class="s-works target-section">
+    <section id="links" class="s-works target-section">
 
         <div class="row narrow section-intro has-bottom-sep">
             <div class="col-full">
-                <h3>Musings</h3>
-                <h1>Thought Provoking Curiosities.</h1>
-                <p class="lead">This is where I will be linking the topics that interest me personally. You can check out my blog <a href="https://medium.com/buzz-words" target="_blank">buzzwords</a>, to read more about science and technology. All of the links can be found here.</p>
+                <h1>Thought Provoking Curiosities</h1>
+                <!-- <p class="lead">This is where I will be linking the topics that interest me personally. You can check out my substack, medium or twitter below.</p> -->
             </div>
         </div>
 
-        <!-- <div class="row masonry-wrap"> -->
+        <div class="row masonry-wrap">
             <div class="masonry">
-
                 <div class="masonry__brick">
-                        <!-- <a href="http://kishoremayank.github.io/buzzwords/mayanks_thoughts" target="_blank" title="The Beetle Car" data-size="1050x700">
-                            <img src="images/portfolio/stars.jpg" 
-                                 srcset="images/portfolio/stars.jpg" alt="">
+                        <a href="https://medium.com/buzz-words" target="_blank" title="Medium" data-size="1050x700">
+                            <img src="images/medium.png" 
+                                 srcset="images/medium.png" alt="" height="200px" width="400px">
                             <span class="shadow-overlay"></span>
                         </a>
 
                         <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                Life of Sun
+                            <h3 class="item-folio__title" style="color: black;">
+                                
                             </h3>
-                            <p class="item-folio__cat">
-                                Astronomy
-                            </p> -->
-                        </div>
-                </div> <!-- end masonry__brick -->
-
-                <div class="masonry__brick">
-                        <!-- <a href="http://kishoremayank.github.io/buzzwordzz/mayanks_thoughts" target="_blank" title="Aliens" data-size="1050x700"> -->
-                            <!-- <img src="images/portfolio/coming_soon.png" 
-                                 srcset="images/portfolio/coming_soon.png" alt="">
-                            <span class="shadow-overlay" style=""></span>
-                        </a>
-
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title" style="color: black">
-                                Aliens?
-                            </h3>
-                            <p class="item-folio__cat" style="color: black">
-                                Science
-                            </p>
-                        </div> -->
-                </div> <!-- end masonry__brick -->
-
-                <div class="masonry__brick">
-                    <!-- <div class="item-folio">
-
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-salad.jpg" class="thumb-link" data-size="1050x700">
-                                <img src="images/portfolio/salad.jpg" 
-                                     srcset="images/portfolio/salad.jpg 1x, images/portfolio/salad@2x.jpg 2x" alt="">
-                                <span class="shadow-overlay"></span>
-                            </a>
-                        </div>
-
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                Salad
-                            </h3>
-                            <p class="item-folio__cat">
-                                Branding
+                            <p class="item-folio__cat" style="color: black;">
+                                Buzzwords
                             </p>
                         </div>
-
-                        <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </span>
-
-                    </div> --> <!-- end item-folio -->
                 </div> <!-- end masonry__brick -->
-
                 <div class="masonry__brick">
-                    <!-- <div class="item-folio">
+                    <a href="https://mayankmusing.substack.com/" target="_blank" title="Substack" data-size="1050x700">
+                        <img src="images/sub.png" 
+                             srcset="images/sub.png" alt="" height="200px" width="400px">
+                        <span class="shadow-overlay"></span>
+                    </a>
 
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" data-size="1050x700">
-                                <img src="images/portfolio/woodcraft.jpg"
-                                     srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
-                                <span class="shadow-overlay"></span>
-                            </a>
-                        </div>
-
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                Woodcraft
-                            </h3>
-                            <p class="item-folio__cat">
-                                Branding
-                            </p>
-                        </div>
-
-                        <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </span>
-
-                    </div> --> <!-- end item-folio -->
+                    <div class="item-folio__text">
+                        <h3 class="item-folio__title" style="color: rgb(255, 255, 255);">
+                            
+                        </h3>
+                        <p class="item-folio__cat" style="color: rgb(255, 255, 255);">
+                            Mayank's Musings
+                        </p>
+                    </div>
                 </div> <!-- end masonry__brick -->
-
                 <div class="masonry__brick">
-                    <!-- <div class="item-folio">
+                    <a href="https://twitter.com/_mayankkishore" target="_blank" title="Twitter" data-size="1050x700">
+                        <img src="images/twitter.jpg" 
+                             srcset="images/twitter.jpg" alt="" min-height="400px" width="400px">
+                        <span class="shadow-overlay"></span>
+                    </a>
 
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-skaterboy.jpg" class="thumb-link" data-size="1050x700">
-                                <img src="images/portfolio/skaterboy.jpg"
-                                     srcset="images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x" alt="">
-                                <span class="shadow-overlay"></span>
-                            </a>
-                        </div>
-
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                Skaterboy
-                            </h3>
-                            <p class="item-folio__cat">
-                                Web Development
-                            </p>
-                        </div>
-
-                        <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </span>
-
-                    </div> --> <!-- end item-folio -->
+                    <div class="item-folio__text">
+                        <h3 class="item-folio__title" style="color: black;">
+                            
+                        </h3>
+                        <p class="item-folio__cat" style="color: black;">
+                            Twitter
+                        </p>
+                    </div>
                 </div> <!-- end masonry__brick -->
-
-                <div class="masonry__brick">
-                    <!-- <div class="item-folio">
-
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-liberty.jpg" class="thumb-link" data-size="1050x700">
-                                <img src="images/portfolio/liberty.jpg"
-                                     srcset="images/portfolio/liberty.jpg 1x, images/portfolio/liberty@2x.jpg 2x" alt="">
-                                <span class="shadow-overlay"></span>
-                            </a>
-                        </div>
-
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                Liberty
-                            </h3>
-                            <p class="item-folio__cat">
-                                Branding
-                            </p>
-                        </div>
-
-                        <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </span>
-
-                    </div> --> <!-- end item-folio -->
-                </div> <!-- end masonry__brick -->
-
-                <div class="masonry__brick">
-                    <!-- <div class="item-folio">
-
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-minimalismo.jpg" class="thumb-link" data-size="1050x700">
-                                <img src="images/portfolio/minimalismo.jpg"
-                                     srcset="images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x" alt="">
-                                <span class="shadow-overlay"></span>
-                            </a>
-                        </div>
-
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                Minimalismo
-                            </h3>
-                            <p class="item-folio__cat">
-                                Web Design
-                            </p>
-                        </div>
-
-                        <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </span>
-
-                    </div>  --><!-- end item-folio -->
-                </div> <!-- end masonry__brick -->
-
-                <div class="masonry__brick">
-                    <!-- <div class="item-folio">
-
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" data-size="1050x700">
-                                <img src="images/portfolio/shutterbug.jpg"
-                                     srcset="images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x" alt="">
-                                <span class="shadow-overlay"></span>
-                            </a>
-                        </div>
-
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                Lady Shutterbug
-                            </h3>
-                            <p class="item-folio__cat">
-                                Branding
-                            </p>
-                        </div>
-
-                        <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </span>
-
-                    </div> --> <!-- end item-folio -->
-                </div> <!-- end masonry__brick -->
-
-            </div>
-        </div> <!-- end masonry -->
+            </div> <!-- end masonry -->
+        </div>
 
     </section> <!-- end works -->
 
@@ -607,9 +456,9 @@
 
             <div class="col-block stats__col ">
                 <div class="stats__count">
-                    8237
+                    5
                 </div>
-                <h4>Miles Run</h4>
+                <h4>Articles Written</h4>
             </div>
             <div class="col-block stats__col">
                 <div class="stats__count">
@@ -622,7 +471,7 @@
                     <a href="#"><i class="im im-arrow-up" aria-hidden="true"></i></a>
                 </div>
                 <div class="stats__count">
-                    15845
+                    25845
                 </div>
                 <h4>Lines Coded</h4>
             </div>
@@ -646,7 +495,7 @@
         <div class="row narrow section-intro">
             <div class="col-full">
                 <h3>Contact</h3>
-                <h1>Say Hello.</h1>
+                <h1>Say Hello or Connect.</h1>
                 
                 <!-- <p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p> -->
             </div>
@@ -712,15 +561,15 @@
                 </li>
             </ul>  -->
             <div class="col-full tab-full contact__infos">
-                <center><h4 class="h06"><i class="im im-phone" aria-hidden="true"></i> Phone: <a href="tel:9083213246" style="color: #862121;" class="h05">908-361-3246</a></h4></center>
+                <!-- <center><h4 class="h06"><i class="im im-phone" aria-hidden="true"></i> Phone: <a href="tel:9083213246" style="color: #862121;" class="h05">908-361-3246</a></h4></center> -->
                 <!-- <h4 class="h06">Personal Email: <a href="mailto:mayankkishore.in@gmail.com" style="color: #862121;" class="h05">mayankkishore.in</a></h4> -->
 
-                <center><h4 class="h06"><i class="im im-mail" aria-hidden="true"></i> Email: <a href="mailto:mkishore3@gatech.edu" style="color: #862121;" class="h05">mkishore3@gatech.edu</a></h4></center>
+                <!-- <center><h4 class="h06"><i class="im im-mail" aria-hidden="true"></i> Email: <a href="mailto:mkishore3@gatech.edu" style="color: #862121;" class="h05">mkishore3@gatech.edu</a></h4></center> -->
 
-                <h4 class="h06" style="text-align: center"><i class="im im-location" aria-hidden="true"></i> Address:<br> <a href="tel:9083213246" style="color: #862121; display: inline-block; text-align: left;" class="h05">
+                <!-- <h4 class="h06" style="text-align: center"><i class="im im-location" aria-hidden="true"></i> Address:<br> <a href="tel:9083213246" style="color: #862121; display: inline-block; text-align: left;" class="h05">
                 333089 Georgia Tech Station<br>
                 Atlanta, GA<br>
-                30332 US</a></h4>
+                30332 US</a></h4> -->
             </div>
             <footer>
                 <div class="row">
@@ -733,10 +582,10 @@
                                 <a href="https://github.com/KishoreMayank" target="_blank"><i class="im im-github" aria-hidden="true"></i><span>GitHub</span></a>
                             </li>
                             <li>
-                                <a href="https://vsco.co/mayankk1279/images/1" target="_blank"><i class="im im-photo-camera" aria-hidden="true"></i><span>VSCO</span></a>
+                                <a href="https://mayankmusing.substack.com/"><img src="images/substack.png" class="im" aria-hidden="true" width="12px" height="12px"></img><span style="padding-left: 4px;">Substack</span></a>
                             </li>
                             <li>
-                                <a href="https://www.facebook.com/mayank.kishore.357"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+                                <a href="https://twitter.com/_mayankkishore"><i class="im im-twitter" aria-hidden="true"></i><span>Twitter</span></a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/_mayankkishore/" target="_blank"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
