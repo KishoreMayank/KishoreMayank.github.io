@@ -1,0 +1,52 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 40px 10px; /* Reduced padding */
+    max-width: 660px;
+    background-color: #ffffff;
+    color: #333333;
+}
+h1, h2 {
+    font-weight: 600;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+h2 {
+    font-size: 1.5em;
+    margin-top: 1em; /* Reduced margin */
+    margin-bottom: 0.5em;
+}
+p {
+    margin-bottom: 0.5em; /* Reduced margin */
+    font-size: 0.9em;
+}
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.intro, .essays, .about {
+    margin-bottom: 1em; /* Reduced margin */
+    padding-bottom: 1em; /* Reduced padding */
+    border-bottom: none; /* Removed bottom border */
+}
+
+.intro {
+    border-bottom: 1px solid #f0f0f0; /* Light divider between intro and essays */
+}
+
+.essay-list {
+    list-style-type: none;
+    padding: 0px 0px;
+}
+.essay-list li {
+    margin-bottom: 0.3em;
+}
+.essay-list a {
+    font-size: 0.9em;
+}
