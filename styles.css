@@ -12,7 +12,14 @@ h1, h2 {
 }
 h1 {
     font-size: 2.5em;
+    margin-bottom: 0em;
+    margin-top: 0.67em;
+}
+.date {
+    margin-top: 0em;
+    font-size: 0.7em;
     margin-bottom: 0.5em;
+    font-style: italic;
 }
 h2 {
     font-size: 1.5em;
