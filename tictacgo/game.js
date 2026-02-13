@@ -5,12 +5,14 @@ const O = "O";
 
 const boardEl = document.getElementById("board");
 const statusEl = document.getElementById("status");
+const undoBtn = document.getElementById("undoBtn");
 const resetBtn = document.getElementById("resetBtn");
 
 let board = [];
 let player = { r: 2, c: 0 };
 let gameOver = false;
 let baselineXLines = new Set();
+let history = [];
 
 function createEmptyBoard() {
   return Array.from({ length: SIZE }, () => Array(SIZE).fill(EMPTY));
@@ -38,10 +40,12 @@ function resetGame() {
   board = createEmptyBoard();
   player = { r: 2, c: 0 };
   gameOver = false;
+  history = [];
   placeInitialPieces();
   baselineXLines = new Set(getLineKeys(X));
   setStatus("Line up 3 O's to win.");
   render();
+  updateUndoButton();
 }
 
 function inBounds(r, c) {
@@ -51,6 +55,37 @@ function inBounds(r, c) {
 function setStatus(text, cls = "") {
   statusEl.className = `status ${cls}`.trim();
   statusEl.textContent = text;
+}
+
+function cloneBoard(sourceBoard) {
+  return sourceBoard.map((row) => [...row]);
+}
+
+function saveHistory() {
+  history.push({
+    board: cloneBoard(board),
+    player: { ...player },
+    gameOver,
+    statusText: statusEl.textContent,
+    statusClass: statusEl.className,
+  });
+  updateUndoButton();
+}
+
+function undoMove() {
+  if (history.length === 0) return;
+  const previous = history.pop();
+  board = cloneBoard(previous.board);
+  player = { ...previous.player };
+  gameOver = previous.gameOver;
+  statusEl.textContent = previous.statusText;
+  statusEl.className = previous.statusClass;
+  render();
+  updateUndoButton();
+}
+
+function updateUndoButton() {
+  undoBtn.disabled = history.length === 0;
 }
 
 function getLineKeys(piece) {
@@ -180,6 +215,7 @@ function tryMove(dr, dc) {
   const target = board[nextR][nextC];
 
   if (target === EMPTY) {
+    saveHistory();
     player = { r: nextR, c: nextC };
     render();
     checkGameState();
@@ -195,6 +231,7 @@ function tryMove(dr, dc) {
     return;
   }
 
+  saveHistory();
   board[pushR][pushC] = target;
   board[nextR][nextC] = EMPTY;
   player = { r: nextR, c: nextC };
@@ -214,6 +251,7 @@ window.addEventListener("keydown", (event) => {
   if (key === "arrowright" || key === "d") tryMove(0, 1);
 });
 
+undoBtn.addEventListener("click", undoMove);
 resetBtn.addEventListener("click", resetGame);
 
 resetGame();
