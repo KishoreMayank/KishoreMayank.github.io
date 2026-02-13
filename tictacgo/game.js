@@ -13,6 +13,9 @@ let player = { r: 2, c: 0 };
 let gameOver = false;
 let baselineXLines = new Set();
 let history = [];
+let touchStart = null;
+
+const SWIPE_THRESHOLD = 28;
 
 function createEmptyBoard() {
   return Array.from({ length: SIZE }, () => Array(SIZE).fill(EMPTY));
@@ -250,6 +253,61 @@ window.addEventListener("keydown", (event) => {
   if (key === "arrowleft" || key === "a") tryMove(0, -1);
   if (key === "arrowright" || key === "d") tryMove(0, 1);
 });
+
+function handleSwipe(deltaX, deltaY) {
+  if (Math.abs(deltaX) < SWIPE_THRESHOLD && Math.abs(deltaY) < SWIPE_THRESHOLD) return;
+
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+    if (deltaX > 0) tryMove(0, 1);
+    else tryMove(0, -1);
+  } else {
+    if (deltaY > 0) tryMove(1, 0);
+    else tryMove(-1, 0);
+  }
+}
+
+boardEl.addEventListener(
+  "touchstart",
+  (event) => {
+    if (event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    touchStart = { x: touch.clientX, y: touch.clientY };
+  },
+  { passive: true }
+);
+
+boardEl.addEventListener(
+  "touchmove",
+  (event) => {
+    if (!touchStart) return;
+    event.preventDefault();
+  },
+  { passive: false }
+);
+
+boardEl.addEventListener(
+  "touchend",
+  (event) => {
+    if (!touchStart || event.changedTouches.length === 0) {
+      touchStart = null;
+      return;
+    }
+    const touch = event.changedTouches[0];
+    const deltaX = touch.clientX - touchStart.x;
+    const deltaY = touch.clientY - touchStart.y;
+    handleSwipe(deltaX, deltaY);
+    touchStart = null;
+  },
+  { passive: true }
+);
+
+boardEl.addEventListener(
+  "touchcancel",
+  () => {
+    touchStart = null;
+  },
+  { passive: true }
+);
 
 undoBtn.addEventListener("click", undoMove);
 resetBtn.addEventListener("click", resetGame);
