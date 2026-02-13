@@ -162,8 +162,33 @@ function getLineKeys(piece, sourceBoard = board) {
   return [...keys];
 }
 
-function hasWin(sourceBoard) {
-  return getLineKeys(O, sourceBoard).length > 0;
+function hasWin(sourceBoard, playerPos) {
+  const dirs = [
+    [0, 1],
+    [1, 0],
+  ];
+
+  const isOAt = (r, c) => {
+    if (playerPos && playerPos.r === r && playerPos.c === c) return true;
+    return sourceBoard[r][c] === O;
+  };
+
+  for (let r = 0; r < SIZE; r += 1) {
+    for (let c = 0; c < SIZE; c += 1) {
+      if (!isOAt(r, c)) continue;
+      for (const [dr, dc] of dirs) {
+        const r2 = r + dr;
+        const c2 = c + dc;
+        const r3 = r + dr * 2;
+        const c3 = c + dc * 2;
+        if (inBounds(r3, c3) && isOAt(r2, c2) && isOAt(r3, c3)) {
+          return true;
+        }
+      }
+    }
+  }
+
+  return false;
 }
 
 function hasLoss(sourceBoard) {
@@ -172,7 +197,7 @@ function hasLoss(sourceBoard) {
 }
 
 function checkGameState() {
-  if (hasWin(board)) {
+  if (hasWin(board, player)) {
     gameOver = true;
     setStatus("You win: 3 O's in a row.", "win");
     updateControls();
@@ -300,8 +325,9 @@ function canonicalRegionKey(boardState, playerPos) {
   return `${boardToString(boardState)}@${minIdx}`;
 }
 
-function pushHeuristic(boardState) {
-  if (hasWin(boardState)) return 0;
+function pushHeuristic(boardState, playerPos) {
+  // The solver treats the player circle as an O for win detection.
+  if (hasWin(boardState, playerPos)) return 0;
   let best = 0;
 
   for (let r = 0; r < SIZE; r += 1) {
@@ -373,7 +399,7 @@ async function aStarSolveVisual(startState, runId) {
   openHeap.push({
     state: startState,
     g: 0,
-    f: pushHeuristic(startState.board),
+    f: pushHeuristic(startState.board, startState.player),
     parent: null,
     stepMoves: [],
   });
@@ -394,7 +420,7 @@ async function aStarSolveVisual(startState, runId) {
       await sleep(SEARCH_STEP_DELAY_MS);
     }
 
-    if (hasWin(current.state.board)) {
+    if (hasWin(current.state.board, current.state.player)) {
       const replayMoves = [];
       const segments = [];
       let node = current;
@@ -428,7 +454,7 @@ async function aStarSolveVisual(startState, runId) {
       openHeap.push({
         state: next.state,
         g: nextG,
-        f: nextG + pushHeuristic(next.state.board),
+        f: nextG + pushHeuristic(next.state.board, next.state.player),
         parent: current,
         stepMoves: next.replayMoves,
       });
