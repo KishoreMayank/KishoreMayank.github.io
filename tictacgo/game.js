@@ -4,6 +4,7 @@ const X = "X";
 const O = "O";
 
 const boardEl = document.getElementById("board");
+const boardShellEl = document.querySelector(".board-shell");
 const statusEl = document.getElementById("status");
 const undoBtn = document.getElementById("undoBtn");
 const resetBtn = document.getElementById("resetBtn");
@@ -14,6 +15,7 @@ let gameOver = false;
 let baselineXLines = new Set();
 let history = [];
 let touchStart = null;
+let pointerStart = null;
 
 const SWIPE_THRESHOLD = 28;
 
@@ -266,7 +268,36 @@ function handleSwipe(deltaX, deltaY) {
   }
 }
 
-boardEl.addEventListener(
+boardShellEl.addEventListener(
+  "pointerdown",
+  (event) => {
+    if (event.pointerType !== "touch" && event.pointerType !== "pen") return;
+    pointerStart = { x: event.clientX, y: event.clientY };
+  },
+  { passive: true }
+);
+
+boardShellEl.addEventListener(
+  "pointerup",
+  (event) => {
+    if (!pointerStart) return;
+    const deltaX = event.clientX - pointerStart.x;
+    const deltaY = event.clientY - pointerStart.y;
+    handleSwipe(deltaX, deltaY);
+    pointerStart = null;
+  },
+  { passive: true }
+);
+
+boardShellEl.addEventListener(
+  "pointercancel",
+  () => {
+    pointerStart = null;
+  },
+  { passive: true }
+);
+
+boardShellEl.addEventListener(
   "touchstart",
   (event) => {
     if (event.touches.length !== 1) return;
@@ -276,7 +307,7 @@ boardEl.addEventListener(
   { passive: true }
 );
 
-boardEl.addEventListener(
+boardShellEl.addEventListener(
   "touchmove",
   (event) => {
     if (!touchStart) return;
@@ -285,7 +316,7 @@ boardEl.addEventListener(
   { passive: false }
 );
 
-boardEl.addEventListener(
+boardShellEl.addEventListener(
   "touchend",
   (event) => {
     if (!touchStart || event.changedTouches.length === 0) {
@@ -301,7 +332,7 @@ boardEl.addEventListener(
   { passive: true }
 );
 
-boardEl.addEventListener(
+boardShellEl.addEventListener(
   "touchcancel",
   () => {
     touchStart = null;
