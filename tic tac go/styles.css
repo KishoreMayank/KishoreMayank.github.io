@@ -1,0 +1,170 @@
+:root {
+  --bg: #f6dfc1;
+  --panel: #9b5a27;
+  --panel-dark: #764218;
+  --cell: #f4c977;
+  --cell-border: #d48d4f;
+  --x: #8b430f;
+  --o: #ffffff;
+  --text: #2c180b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+  background: radial-gradient(circle at top, #ffd9b4, #f6b176 55%, #d68347);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+}
+
+.app {
+  width: min(92vw, 560px);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 8px;
+  letter-spacing: 0.04em;
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+}
+
+.board-shell {
+  background: linear-gradient(var(--panel), var(--panel-dark));
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+}
+
+.cell {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  background: var(--cell);
+  border: 3px solid var(--cell-border);
+}
+
+.piece {
+  position: absolute;
+  inset: 12%;
+}
+
+.piece.x::before,
+.piece.x::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  left: 40%;
+  background: var(--x);
+  border-radius: 999px;
+}
+
+.piece.x::before {
+  transform: rotate(45deg);
+}
+
+.piece.x::after {
+  transform: rotate(-45deg);
+}
+
+.piece.o {
+  border: 8px solid var(--o);
+  border-radius: 50%;
+}
+
+.player {
+  position: absolute;
+  inset: 16%;
+  border-radius: 50%;
+  background: #fff7eb;
+  border: 8px solid #ffffff;
+  box-shadow: inset 0 0 0 7px #f0b75f;
+}
+
+.player .eye {
+  position: absolute;
+  width: 12%;
+  height: 12%;
+  border-radius: 50%;
+  background: #fff;
+  top: 43%;
+}
+
+.player .eye.left {
+  left: 30%;
+}
+
+.player .eye.right {
+  right: 30%;
+}
+
+.status {
+  min-height: 1.5em;
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+.status.win {
+  color: #175716;
+}
+
+.status.lose {
+  color: #8b140d;
+}
+
+.solver-stats {
+  margin: 0 0 10px;
+  min-height: 1.25em;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.solve-btn,
+.reset-btn {
+  border: none;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.solve-btn {
+  background: #2f6c1f;
+  color: #fff;
+}
+
+.solve-btn:disabled,
+.reset-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.solve-btn:hover:enabled,
+.reset-btn:hover:enabled {
+  filter: brightness(0.95);
+}
