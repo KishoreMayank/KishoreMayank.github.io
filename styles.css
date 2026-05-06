@@ -71,3 +71,10 @@ a:hover {
 .essay-list a {
     font-size: 0.9em;
 }
+
+.article-bottom-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 2em;
+}
