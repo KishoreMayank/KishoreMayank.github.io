@@ -18,10 +18,10 @@
     </header>
 
     <section class="intro">
-        <img src="assets/mayank_glasses.jpg" alt="Mayank Kishore" style="width:160px;height:160px;float:left;margin-right:20px;margin-bottom:10px;display:none;">
+        <img src="assets/mayank_headshot.jpg" alt="Mayank Kishore" style="width:160px;height:160px;float:left;margin-right:20px;margin-bottom:10px;display:none;">
         <style>
             @media screen and (min-width: 768px) {
-                img[src="assets/mayank_glasses.jpg"] {
+                img[src="assets/mayank_headshot.jpg"] {
                     display: block !important;
                 }
             }
@@ -48,6 +48,10 @@
     <section class="essays">
         <h2>Essays</h2>
         <ul class="essay-list">
+            <li class="has-preview">
+                <a href="r2d2.html" class="preview-link" data-preview="https://brownie.bot">Where is my R2-D2?</a>
+                <div class="link-preview" aria-hidden="true"><iframe title="brownie.bot preview" tabindex="-1"></iframe></div>
+            </li>
             <li><a href="artist.html">Everyone Must Become an Artist</a></li>
             <li><a href="whimsy.html">Whimsy in 2026</a></li>
             <li><a href="outofreach.html">Out of Reach Wins</a></li>
@@ -61,6 +65,85 @@
             <li><a href="https://mayankmusing.substack.com/p/the-importance-of-winning-13" target="_blank">The Importance of Winning</a></li>
         </ul>
     </section>
+    <script>
+        // Hover preview: lazy-load the iframe on first hover, show after a short
+        // intent delay, and float the card to the right of the link text,
+        // clamped so it never leaves the viewport.
+        (function () {
+            var fine = matchMedia('(hover: hover) and (pointer: fine)');
+            var GAP = 20, EDGE = 16, MAX_W = 360, MIN_W = 240, SHOW_DELAY = 90, HIDE_MS = 120;
+
+            document.querySelectorAll('.preview-link').forEach(function (link) {
+                var item = link.parentElement;
+                var card = link.nextElementSibling;
+                var frame = card.querySelector('iframe');
+                var showTimer, resetTimer;
+
+                // Right edge of the widest neighbouring title the card would sit beside,
+                // so it floats in the empty space instead of covering longer titles.
+                function clearRight(top, bottom) {
+                    var right = link.getBoundingClientRect().right;
+                    item.parentElement.querySelectorAll('a').forEach(function (a) {
+                        var r = a.getBoundingClientRect();
+                        if (r.bottom > top && r.top < bottom) right = Math.max(right, r.right);
+                    });
+                    return right;
+                }
+
+                function place() {
+                    var lr = link.getBoundingClientRect();
+                    var ir = item.getBoundingClientRect();
+                    var vw = document.documentElement.clientWidth;
+                    var sideTop = lr.top + lr.height / 2 - (MAX_W * 0.625) / 2 + 12;
+                    var anchor = clearRight(sideTop, sideTop + MAX_W * 0.625);
+                    var room = vw - anchor - GAP - EDGE;
+                    var below = room < MIN_W;
+                    var w = below ? Math.min(MAX_W, vw - ir.left - EDGE) : Math.min(MAX_W, room);
+                    var h = w * 0.625;
+                    card.style.setProperty('--w', w + 'px');
+                    card.style.setProperty('--scale', w / 1280);
+                    card.classList.toggle('is-below', below);
+                    if (below) {
+                        card.style.left = '0px';
+                        card.style.top = (lr.bottom - ir.top + 8) + 'px';
+                    } else {
+                        // Vertically centered on the link, nudged slightly down.
+                        card.style.left = (anchor - ir.left + GAP) + 'px';
+                        card.style.top = (lr.top - ir.top + lr.height / 2 - h / 2 + 12) + 'px';
+                    }
+                }
+
+                function show() {
+                    if (!fine.matches) return;
+                    clearTimeout(resetTimer);
+                    if (!frame.src) frame.src = link.dataset.preview;
+                    clearTimeout(showTimer);
+                    showTimer = setTimeout(function () {
+                        place();
+                        card.classList.add('is-visible');
+                    }, SHOW_DELAY);
+                }
+
+                function hide() {
+                    clearTimeout(showTimer);
+                    if (!card.classList.contains('is-visible')) return;
+                    card.classList.remove('is-visible');
+                    // Park the hidden card back inside the column so it can't
+                    // widen the page if the window is resized later.
+                    resetTimer = setTimeout(function () {
+                        card.style.left = '0px';
+                        card.style.top = '0px';
+                    }, HIDE_MS + 20);
+                }
+
+                link.addEventListener('mouseenter', show);
+                link.addEventListener('mouseleave', hide);
+                link.addEventListener('focus', show);
+                link.addEventListener('blur', hide);
+                window.addEventListener('resize', hide);
+            });
+        })();
+    </script>
 </body>
 </body>
 </html>
