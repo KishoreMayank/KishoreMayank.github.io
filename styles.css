@@ -97,7 +97,7 @@ a:hover {
         left: 0;
         z-index: 10;
         width: var(--w);
-        height: calc(var(--w) * 0.625); /* 16:10, matches 1280x800 */
+        height: calc(var(--w) * var(--ratio, 0.625));
         overflow: hidden;
         border: 1px solid #e6e6e6;
         border-radius: 10px;
@@ -116,6 +116,12 @@ a:hover {
     .link-preview.is-below {
         transform: translateY(-6px) scale(0.98);
         transform-origin: top left;
+    }
+    .link-preview img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
     .link-preview iframe {
         width: 1280px;

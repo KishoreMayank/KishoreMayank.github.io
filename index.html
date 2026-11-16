@@ -49,6 +49,10 @@
         <h2>Essays</h2>
         <ul class="essay-list">
             <li class="has-preview">
+                <a href="a-million-worlds.html" class="preview-link" data-preview-ratio="0.5241666667">A Million Worlds</a>
+                <div class="link-preview" aria-hidden="true"><img src="assets/hero-antioch.png" alt="" loading="lazy" width="2400" height="1258"></div>
+            </li>
+            <li class="has-preview">
                 <a href="r2d2.html" class="preview-link" data-preview="https://brownie.bot">Where is my R2-D2?</a>
                 <div class="link-preview" aria-hidden="true"><iframe title="brownie.bot preview" tabindex="-1"></iframe></div>
             </li>
@@ -77,6 +81,8 @@
                 var item = link.parentElement;
                 var card = link.nextElementSibling;
                 var frame = card.querySelector('iframe');
+                var ratio = Number(link.dataset.previewRatio) || 0.625;
+                card.style.setProperty('--ratio', ratio);
                 var showTimer, resetTimer;
 
                 // Right edge of the widest neighbouring title the card would sit beside,
@@ -94,12 +100,12 @@
                     var lr = link.getBoundingClientRect();
                     var ir = item.getBoundingClientRect();
                     var vw = document.documentElement.clientWidth;
-                    var sideTop = lr.top + lr.height / 2 - (MAX_W * 0.625) / 2 + 12;
-                    var anchor = clearRight(sideTop, sideTop + MAX_W * 0.625);
+                    var sideTop = lr.top + lr.height / 2 - (MAX_W * ratio) / 2 + 12;
+                    var anchor = clearRight(sideTop, sideTop + MAX_W * ratio);
                     var room = vw - anchor - GAP - EDGE;
                     var below = room < MIN_W;
                     var w = below ? Math.min(MAX_W, vw - ir.left - EDGE) : Math.min(MAX_W, room);
-                    var h = w * 0.625;
+                    var h = w * ratio;
                     card.style.setProperty('--w', w + 'px');
                     card.style.setProperty('--scale', w / 1280);
                     card.classList.toggle('is-below', below);
@@ -116,7 +122,7 @@
                 function show() {
                     if (!fine.matches) return;
                     clearTimeout(resetTimer);
-                    if (!frame.src) frame.src = link.dataset.preview;
+                    if (frame && !frame.src) frame.src = link.dataset.preview;
                     clearTimeout(showTimer);
                     showTimer = setTimeout(function () {
                         place();
