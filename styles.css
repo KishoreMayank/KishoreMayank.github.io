@@ -174,6 +174,12 @@ a:hover {
     border: 0;
     pointer-events: none;
 }
+.robot-embed-scaled iframe {
+    width: 150%;
+    height: 150%;
+    transform: scale(0.6666666667);
+    transform-origin: top left;
+}
 .robot-embed-hint {
     position: absolute;
     right: 12px;
@@ -189,6 +195,18 @@ a:hover {
     opacity: 0;
     transform: translateY(4px);
     transition: opacity 180ms cubic-bezier(0.22, 1, 0.36, 1), transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.robot-embed-hint-prominent {
+    left: 12px;
+    right: auto;
+    padding: 8px 12px;
+    border: 1px solid #c7d8e5;
+    background-color: #ffffff;
+    color: #3e6a93;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+    box-shadow: 0 2px 8px rgba(38, 67, 91, 0.12);
 }
 .robot-embed-frame:hover .robot-embed-hint,
 .robot-embed-frame:focus-visible .robot-embed-hint {

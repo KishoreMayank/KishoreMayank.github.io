@@ -8,7 +8,7 @@
     <meta name="author" content="Mayank Kishore">
     <meta property="og:title" content="A Million Worlds">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://mayankkishore.com/a-million-worlds.html">
+    <meta property="og:url" content="https://mayankkishore.com/antioch.html">
     <meta property="og:description" content="Antioch is the simulation infrastructure to scale physical AI.">
     <meta property="og:image" content="https://mayankkishore.com/assets/hero-antioch.png">
     <meta property="og:image:width" content="2400">
@@ -24,16 +24,12 @@
         <p class="date">November 2026</p>
     </header>
     <article>
-        <video id="antioch-demo" controls autoplay muted loop playsinline preload="metadata" poster="assets/hero-antioch.png" aria-label="Antioch simulation demo" style="display:block;width:100%;height:auto;margin:1em 0 1.75em;">
-            <source src="assets/brownie-antioch-full.mp4" type="video/mp4">
-            <a href="assets/brownie-antioch-full.mp4">Watch the Antioch simulation demo</a>.
-        </video>
-        <script>
-            const demo = document.getElementById('antioch-demo');
-            demo.defaultPlaybackRate = 2;
-            demo.playbackRate = 2;
-            demo.addEventListener('loadedmetadata', () => { demo.playbackRate = 2; });
-        </script>
+        <figure class="robot-embed">
+            <a class="robot-embed-frame robot-embed-scaled" href="https://brownie.bot/antioch" target="_blank" rel="noopener" aria-label="Open brownie.bot/antioch in a new tab">
+                <iframe src="https://brownie.bot/antioch" title="Antioch simulation demo, live from brownie.bot" loading="lazy" tabindex="-1"></iframe>
+                <span class="robot-embed-hint robot-embed-hint-prominent">Open brownie.bot/antioch ↗</span>
+            </a>
+        </figure>
         <p>Software is experiencing unprecedented acceleration. The loop between writing code, testing it, and learning from failure keeps getting shorter. Excellent coding harnesses build environments to run and test software, ad infinitum.</p>
 
         <p>What about the physical world?</p>
