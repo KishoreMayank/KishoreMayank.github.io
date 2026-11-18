@@ -180,6 +180,27 @@ a:hover {
     transform: scale(0.6666666667);
     transform-origin: top left;
 }
+@media (max-width: 600px) {
+    .antioch-essay {
+        padding: 24px 20px calc(48px + env(safe-area-inset-bottom));
+    }
+    .antioch-essay article > p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    .antioch-essay .robot-embed-frame {
+        aspect-ratio: 4 / 5;
+    }
+    .antioch-essay .robot-embed-scaled iframe {
+        height: calc(150% - 66px);
+    }
+    .antioch-essay .robot-embed-hint-prominent {
+        bottom: 6px;
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
 .robot-embed-hint {
     position: absolute;
     right: 12px;
